@@ -5,19 +5,24 @@ public class Equipment {
 
 	private String title;
 	private double price;
-	private int size;
+	private String category;
 	
-private static Equipment equipments[];
+//private static Equipment mainEquipments[];
+//private static Equipment additionalEquipments[];
+
 	
-	public Equipment(String title, double price, int size) {
+	
+	/*public Equipment(String title, double price, String category) {
 		this.title = title;
 		this.price = price;
-		this.size = size;
+		this.category = category;
 	}
 
-	public Equipment(Equipment equipments[]) {
-		this.equipments=equipments;
-		}
+	public Equipment(Equipment mainEquipments[]) {
+		this.mainEquipments=mainEquipments;
+		}*/
+	
+	
 	
 	public double getPrice() {
 		return price;
@@ -25,11 +30,11 @@ private static Equipment equipments[];
 	public void setPrice(double weight) {
 		this.price = weight;
 	}
-	public int getSize() {
-		return size;
+	public String getCategory() {
+		return category;
 	}
-	public void setSize(int size) {
-		this.size = size;
+	public void setCategory(String category) {
+		this.category = category;
 	}
 	
 	public String getTitle() {
