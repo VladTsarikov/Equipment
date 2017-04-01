@@ -12,13 +12,19 @@ public class Equipment {
 
 	
 	
-	/*public Equipment(String title, double price, String category) {
+	public Equipment(String title, double price, String category) {
 		this.title = title;
 		this.price = price;
 		this.category = category;
 	}
 
-	public Equipment(Equipment mainEquipments[]) {
+	public Equipment() {
+		
+	}
+	
+	
+	
+	/*public Equipment(Equipment mainEquipments[]) {
 		this.mainEquipments=mainEquipments;
 		}*/
 	

@@ -1,6 +1,8 @@
 package by.htp.equipment.logic;
 
-public class Operations {
+import by.htp.equipment.entity.Equipment;
+
+public class Operations extends Equipment{
 
 	
 }

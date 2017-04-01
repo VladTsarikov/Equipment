@@ -1,6 +1,16 @@
 package by.htp.equipment.entity;
 
-public class RentUnit {
+public class RentUnit extends Equipment{
 
-	private Equipment[] units;
+	private Equipment[] UnitsEquipment;
+	private Equipment[] UnitsAccessory;
+	
+	public RentUnit(Equipment[] unitsEquipment, Equipment[] unitsAccessory) {
+		//super();
+		UnitsEquipment = unitsEquipment;
+		UnitsAccessory = unitsAccessory;
+	}
+	
+	
+	
 }
