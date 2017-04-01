@@ -4,14 +4,14 @@ package by.htp.equipment.entity;
 public class Equipment {
 
 	private String title;
-	private double weight;
+	private double price;
 	private int size;
 	
 private static Equipment equipments[];
 	
-	public Equipment(String title, double weight, int size) {
+	public Equipment(String title, double price, int size) {
 		this.title = title;
-		this.weight = weight;
+		this.price = price;
 		this.size = size;
 	}
 
@@ -19,11 +19,11 @@ private static Equipment equipments[];
 		this.equipments=equipments;
 		}
 	
-	public double getWeight() {
-		return weight;
+	public double getPrice() {
+		return price;
 	}
-	public void setWeight(double weight) {
-		this.weight = weight;
+	public void setPrice(double weight) {
+		this.price = weight;
 	}
 	public int getSize() {
 		return size;
