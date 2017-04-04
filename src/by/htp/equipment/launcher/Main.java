@@ -2,64 +2,54 @@ package by.htp.equipment.launcher;
 
 import by.htp.equipment.entity.Accessory;
 import by.htp.equipment.entity.Bicycle;
+import by.htp.equipment.entity.Client;
 import by.htp.equipment.entity.Equipment;
 import by.htp.equipment.entity.Helmet;
 import by.htp.equipment.entity.Protection;
+import by.htp.equipment.entity.RentStation;
+import by.htp.equipment.entity.RentUnit;
 import by.htp.equipment.entity.Rollers;
 import by.htp.equipment.entity.Skate;
 import by.htp.equipment.entity.Skiing;
 import by.htp.equipment.entity.SkyPoles;
+import by.htp.equipment.logic.Operations;
 
 public class Main {
 
 	public static void main(String[] args){
 		
-		Equipment bicycle = new Bicycle("Bicycle1",4,"",1);
-		Equipment rollers = new Rollers("Bicycle1",4,"",1);
-		Equipment skate = new Skate("Bicycle1",4,"",1);
-		Equipment skiing = new Skiing("Bicycle1",4,"",1);
+		Equipment bicycle = new Bicycle("Bicycle1",8,"Summer",1);
+		Equipment rollers = new Rollers("Rollers1",7,"Summer",2);
+		Equipment skate = new Skate("Skate1",4,"Winter",3);
+		Equipment skiing = new Skiing("Skiing1",9,"Winter",4);
 		
-		Equipment helmet = new Helmet("Bicycle1",4,"",1);
-		Equipment protection = new Protection("Bicycle1",4,"",1);
-		Equipment skyPoles = new SkyPoles("Bicycle1",4,"",1);
+		Equipment helmet = new Helmet("Helmet1",2,"Summer",5);
+		Equipment protection = new Protection("Protection1",4,"Summer",6);
+		Equipment skyPoles = new SkyPoles("SkyRollers1",3,"Winter",7);
 		
+		Equipment[] unitsEquipment = new Equipment[7];
+		Equipment[] stationEquipment = new Equipment[7];
 		
-		Equipment[] unitsEquipment = new Equipment[4];
-		Equipment[] stationsEquipment = new Equipment[4];
-		Equipment[] unitsAccessory = new Equipment[4];
-		Equipment[] stationsAccessory = new Equipment[4];
+		RentStation.setStationsEquipment(stationEquipment);
+		RentUnit.setUnitsEquipment(unitsEquipment);
 		
-		unitsEquipment[0] = new Equipment();
-		unitsEquipment[1] = new Equipment();
-		unitsEquipment[2] = new Equipment();
-		unitsEquipment[3] = new Equipment();
+		Equipment[] allEquipment = new Equipment[7];
+		allEquipment[0] = bicycle;
+		allEquipment[1] = rollers;
+		allEquipment[2] = skate;
+		allEquipment[3] = skiing;
+		allEquipment[4] = helmet;
+		allEquipment[5] = protection;
+		allEquipment[6] = skyPoles;
 		
-		stationsEquipment[0] = new Equipment();
-		stationsEquipment[1] = new Equipment();
-		stationsEquipment[2] = new Equipment();
-		stationsEquipment[3] = new Equipment();
+		Equipment.setAllEquipment(allEquipment);
 		
-		unitsAccessory[0] = new Accessory();
-		unitsAccessory[1] = new Accessory("",2,"");
-		unitsAccessory[2] = new Accessory("",2,"");
-		unitsAccessory[3] = new Accessory("",2,"");
+		Client client1 = new Client("Петров","Иван",1,2,12.45);
 		
-		stationsAccessory[0] = new Accessory("",2,"");
-		stationsAccessory[1] = new Accessory("",2,"");
-		stationsAccessory[2] = new Accessory("",2,"");
-		stationsAccessory[3] = new Accessory("",2,"");
-		
-		
-		
-		
-		
-		
-		/*Equipment equipments[] = new Equipment[4];
-		
-		equipments[0] = new Equipment("Skates",4,"Winter");
-		equipments[1] = new Equipment("Skiing",8,"Winter");
-		equipments[2] = new Equipment("Snowboard",9,"Winter");
-		equipments[3] = new Equipment("Bicycle",6,"Summer");*/
+		client1.rentEquipment(2);
+		client1.rentEquipment(4);
+		client1.rentEquipment(1);
+		Operations.showFreeEquipment();
 		
 	}
 }

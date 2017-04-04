@@ -7,11 +7,21 @@ public class Equipment {
 	private double price;
 	private String category;
 	
-//private static Equipment mainEquipments[];
+private static Equipment allEquipment[];
 //private static Equipment additionalEquipments[];
 
-	
-	
+	public static Equipment[] getAllEquipment() {
+	return allEquipment;
+}
+
+public static void setAllEquipment(Equipment[] allEquipment) {
+	Equipment.allEquipment = allEquipment;
+}
+
+public static int getLenthOfAllEquipment(){
+	return allEquipment.length;
+}
+
 	public Equipment(String title, double price, String category) {
 		this.title = title;
 		this.price = price;
@@ -21,14 +31,6 @@ public class Equipment {
 	public Equipment() {
 		
 	}
-	
-	
-	
-	/*public Equipment(Equipment mainEquipments[]) {
-		this.mainEquipments=mainEquipments;
-		}*/
-	
-	
 	
 	public double getPrice() {
 		return price;
@@ -49,6 +51,14 @@ public class Equipment {
 	public void setTitle(String title) {
 		this.title = title;
 	}
+
+	@Override
+	public String toString() {
+		return "Equipment [title=" + title + ", price=" + price + ", category="
+				+ category + "]";
+	}
+
+	
 	
 	
 }
