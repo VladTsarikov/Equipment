@@ -1,7 +1,7 @@
 package by.htp.equipment.entity;
 
 
-public class RentStation extends Equipment{
+public class RentStation {
 
 	private static Equipment[] StationsEquipment;
 	
@@ -19,7 +19,7 @@ public class RentStation extends Equipment{
 		return StationsEquipment[a];
 	}
 	
-	public static int getLenthStatEquip(){
+	public static int getLengthStatEquip(){
 		return StationsEquipment.length;
 	}
 
@@ -29,5 +29,7 @@ public class RentStation extends Equipment{
 		StationsEquipment = stationsEquipment;
 		
 	}
+	
+	
 	
 }

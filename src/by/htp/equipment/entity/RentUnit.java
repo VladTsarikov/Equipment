@@ -1,6 +1,6 @@
 package by.htp.equipment.entity;
 
-public class RentUnit extends Equipment{
+public class RentUnit{
 
 	private static Equipment[] UnitsEquipment;
 	

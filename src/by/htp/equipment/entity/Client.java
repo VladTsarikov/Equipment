@@ -2,7 +2,7 @@ package by.htp.equipment.entity;
 
 import by.htp.equipment.logic.Operations;
 
-public class Client extends Operations {
+public class Client {
 
 	private String firstName;
 	private String lastName;
@@ -12,7 +12,6 @@ public class Client extends Operations {
 	
 	public Client(String firstName, String lastName, int id, double useTime,
 			double rentTime) {
-		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.id = id;

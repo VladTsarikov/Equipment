@@ -27,29 +27,33 @@ public class Main {
 		Equipment protection = new Protection("Protection1",4,"Summer",6);
 		Equipment skyPoles = new SkyPoles("SkyRollers1",3,"Winter",7);
 		
-		Equipment[] unitsEquipment = new Equipment[7];
+		Equipment[] unitsEquipment = new Equipment[1];
 		Equipment[] stationEquipment = new Equipment[7];
 		
 		RentStation.setStationsEquipment(stationEquipment);
 		RentUnit.setUnitsEquipment(unitsEquipment);
 		
-		Equipment[] allEquipment = new Equipment[7];
-		allEquipment[0] = bicycle;
-		allEquipment[1] = rollers;
-		allEquipment[2] = skate;
-		allEquipment[3] = skiing;
-		allEquipment[4] = helmet;
-		allEquipment[5] = protection;
-		allEquipment[6] = skyPoles;
+		//Equipment[] allEquipment = new Equipment[7];
+		stationEquipment[0] = bicycle;
+		stationEquipment[1] = rollers;
+		stationEquipment[2] = skate;
+		stationEquipment[3] = skiing;
+		stationEquipment[4] = helmet;
+		stationEquipment[5] = protection;
+		stationEquipment[6] = skyPoles;
 		
-		Equipment.setAllEquipment(allEquipment);
 		
 		Client client1 = new Client("Петров","Иван",1,2,12.45);
 		
-		client1.rentEquipment(2);
-		client1.rentEquipment(4);
-		client1.rentEquipment(1);
+		//client1.rentEquipment(2);
+		//client1.rentEquipment(4);
+		//client1.rentEquipment(1);
+		//Operations.showFreeEquipment();
+		Operations.rentEquipment(skate);
+		Operations.rentEquipment(rollers);
+		Operations.rentEquipment(bicycle);
+		Operations.handOverEquipment(skate);
+		Operations.handOverEquipment(rollers);
 		Operations.showFreeEquipment();
-		
 	}
 }

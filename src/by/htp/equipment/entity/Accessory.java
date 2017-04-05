@@ -7,9 +7,6 @@ public class Accessory extends Equipment {
 		// TODO Auto-generated constructor stub
 	}
 
-	//private String title;
-	//private double price;
-	//private String category;
 	private int f;
 	
 	
