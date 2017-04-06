@@ -5,21 +5,17 @@ public abstract class Equipment {
 
 	private String title;
 	private double price;
-	private String category;
+	private String gender;
+	//private String category;
 	
-//private static Equipment allEquipment[];
+	public enum Season{
+		Winter,Summer,Spring,Autumn
+	}
 
-
-
-
-/*public static int getLenthOfAllEquipment(){
-	return allEquipment.length;
-}*/
-
-	public Equipment(String title, double price, String category) {
+	public Equipment(String title, double price, String gender) {
 		this.title = title;
 		this.price = price;
-		this.category = category;
+		this.gender = gender;
 	}
 
 	@Override
@@ -27,7 +23,7 @@ public abstract class Equipment {
 		final int prime = 31;
 		int result = 1;
 		result = prime * result
-				+ ((category == null) ? 0 : category.hashCode());
+				+ ((gender == null) ? 0 : gender.hashCode());
 		long temp;
 		temp = Double.doubleToLongBits(price);
 		result = prime * result + (int) (temp ^ (temp >>> 32));
@@ -44,10 +40,10 @@ public abstract class Equipment {
 		if (getClass() != obj.getClass())
 			return false;
 		Equipment other = (Equipment) obj;
-		if (category == null) {
-			if (other.category != null)
+		if (gender == null) {
+			if (other.gender != null)
 				return false;
-		} else if (!category.equals(other.category))
+		} else if (!gender.equals(other.gender))
 			return false;
 		if (Double.doubleToLongBits(price) != Double
 				.doubleToLongBits(other.price))
@@ -67,14 +63,14 @@ public abstract class Equipment {
 	public double getPrice() {
 		return price;
 	}
-	public void setPrice(double weight) {
-		this.price = weight;
+	public void setPrice(double price) {
+		this.price = price;
 	}
 	public String getCategory() {
-		return category;
+		return gender;
 	}
 	public void setCategory(String category) {
-		this.category = category;
+		this.gender = category;
 	}
 	
 	public String getTitle() {
@@ -86,8 +82,8 @@ public abstract class Equipment {
 
 	@Override
 	public String toString() {
-		return "Equipment [title=" + title + ", price=" + price + ", category="
-				+ category + "]";
+		return "Equipment" + "[title=" + title + ", price=" + price + ", gender="
+				+ gender + "]";
 	}
 
 	
