@@ -1,0 +1,6 @@
+Skiing-Monster, price=9.0, gender=Universal
+Helmet-Author, price=2.0, gender=Universal
+Protection-Fora, price=4.0, gender=Universal
+SkyPole-Visu, price=3.0, gender=Universal
+Skate-Tukzar, price=4.0, gender=Female
+Roller-Relmax, price=7.0, gender=Male

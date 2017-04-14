@@ -4,18 +4,19 @@ import by.htp.equipment.entity.Client;
 import by.htp.equipment.entity.Equipment;
 import by.htp.equipment.entity.RentStation;
 import by.htp.equipment.entity.RentUnit;
-import by.htp.equipment.entity.equipment.Bicycle;
 
-public class Operations{
+public class ClientsOperation{
 
 	private Client client;
 	
-	public Operations(Client client) {
+	private static Client[] clients = new Client[0];
+	
+	public ClientsOperation(Client client) {
 		super();
 		this.client = client;
 	}
 	
-	public Operations() {		
+	public ClientsOperation() {		
 	}
 
 	public Client getClient() {
@@ -25,21 +26,15 @@ public class Operations{
 	public void setClient(Client client) {
 		this.client = client;
 	}
+	
+	public static Client[] getClients() {
+		return clients;
+	}
 
-	public void showFreeEquipment(){
-		System.out.println("Free equipment: ");
-		for(int i =0; i < RentStation.getLengthStatEquip();i++){
-			System.out.println(RentStation.getStationsEquipment(i).toString());
-		}
+	public static void setClients(Client[] clients) {
+		ClientsOperation.clients = clients;
 	}
-	
-public void showUnitEquipment(){
-	System.out.println("Rented equipment: ");
-		for(int i =0; i <RentUnit.getUnitsEquipment().length;i++){
-			System.out.println(RentUnit.getUnitsEquipment()[i].toString());
-		}
-	}
-	
+
 	public void rentEquipment(Equipment equip){
 		int b = 0;
 		if( getClient().getCountRent()<3){
@@ -70,6 +65,8 @@ public void showUnitEquipment(){
 		else{
 			System.out.println("Клиент израсходовал лимит товаров! ");
 		}
+		
+		
 	}
 	
 	public void handOverEquipment(Equipment equip){
@@ -97,8 +94,6 @@ public void showUnitEquipment(){
 		RentUnit.setUnitsEquipment(newUnitsEquipment);
 		getClient().setCountRent(h);
 	}
-	
-	
 	
 	/*public void reset(){
 		for(int j = 0; j<Equipment.getLenthOfAllEquipment();j++){

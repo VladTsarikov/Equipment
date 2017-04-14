@@ -1,6 +1,6 @@
 package by.htp.equipment.entity;
 
-import by.htp.equipment.logic.Operations;
+import by.htp.equipment.logic.ClientsOperation;
 
 public class Client {
 
@@ -10,6 +10,7 @@ public class Client {
 	private double useTime;
 	private double rentTime;
 	private int countRent;
+	
 	
 	public Client(String firstName, String lastName, int id, double useTime,double rentTime) {
 		this.firstName = firstName;
@@ -25,6 +26,13 @@ public class Client {
 
 	public void setCountRent(int countRent) {
 		this.countRent = countRent;
+	}
+
+	@Override
+	public String toString() {
+		return firstName + ", " + lastName
+				+ ", id=" + id + ", useTime=" + useTime + ", rentTime="
+				+ rentTime + ", countRent=" + countRent;
 	}
 	
 	

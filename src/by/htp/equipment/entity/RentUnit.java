@@ -4,6 +4,11 @@ public class RentUnit{
 
 	private static Equipment[] UnitsEquipment;
 	
+	public RentUnit(Equipment[] unitsEquipment) {
+		UnitsEquipment = unitsEquipment;
+		
+	}
+	
 	public static Equipment[] getUnitsEquipment() {
 		return UnitsEquipment;
 	}
@@ -13,11 +18,6 @@ public class RentUnit{
 	}
 	public static Equipment getUnits(int a) {
 		return UnitsEquipment[a];
-	}
-	
-	public RentUnit(Equipment[] unitsEquipment) {
-		UnitsEquipment = unitsEquipment;
-		
 	}
 	
 	public static int getLengthOfUnitEquipment(){

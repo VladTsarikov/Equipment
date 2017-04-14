@@ -1,0 +1,1 @@
+Петров,Иван, id=1, useTime=2.0, rentTime=12.45, countRent=1

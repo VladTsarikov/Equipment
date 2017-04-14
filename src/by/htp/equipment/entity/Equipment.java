@@ -82,8 +82,8 @@ public abstract class Equipment {
 
 	@Override
 	public String toString() {
-		return "Equipment" + "[title=" + title + ", price=" + price + ", gender="
-				+ gender + "]";
+		return title + ", price=" + price + ", gender="
+				+ gender;
 	}
 
 	
