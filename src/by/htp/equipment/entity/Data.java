@@ -62,6 +62,8 @@ public class Data implements Info {
 			FileWriter bw = new FileWriter(file);
 			for(int i =0; i <ClientsOperation.getClients().length;i++){
 				bw.write(ClientsOperation.getClients()[i].toString()+"\n");
+				//bw.write();
+				bw.write("_ _ _ _ _ _ _ _ _");
 			}
 			bw.close();
 		} catch (IOException e) {
