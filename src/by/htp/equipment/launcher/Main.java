@@ -19,6 +19,7 @@ import by.htp.equipment.entity.equipment.Skate;
 import by.htp.equipment.entity.equipment.Skiing;
 import by.htp.equipment.logic.ClientsOperation;
 import by.htp.equipment.logic.Operation;
+import by.htp.equipment.logic.SaxParser;
 
 public class Main {
 
@@ -61,9 +62,10 @@ public class Main {
 	//	equipInfo.showFreeEquipment();
 		//equipInfo.showRentEquipment();
 		//Data test = new Data();
-		equipInfo.writeFreeEquipment();
-		equipInfo.writeRentEquipment();
-		equipInfo.makeReport();
+		//equipInfo.writeFreeEquipment();
+		//equipInfo.writeRentEquipment();
+		//equipInfo.makeReport();
 		
+		SaxParser.saxParse();
 	}
 }

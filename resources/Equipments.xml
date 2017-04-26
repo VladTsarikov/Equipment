@@ -1,2 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<>
+<equipments xmlns="http://www.it-academy.by/EquipmentsSchema"  
+	   		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	   		xsi:schemaLocation = "http://www.it-academy.by/EquipmentsSchema EquipmentsSchema.xsd">
+	<bicycle id="1">
+		<title>Bicycle-LTD</title>
+		<price>8</price>
+		<gender>Universal</gender>
+		<type>Mountain bike</type>
+		<kindOfFrame>Aluminum</kindOfFrame>
+	</bicycle>
+	<roller id="2">
+		<title>Roller-Relmax</title>
+		<price>7</price>
+		<gender>Male</gender>
+		<size>42</size>
+		<diameterOfWheels>72</diameterOfWheels>
+	</roller>
+	<skate id="3">
+		<title>Skate-Tukzar</title>
+		<price>4</price>
+		<gender>Female</gender>
+		<size>38</size>
+	</skate>
+	<skiing id="4">
+		<title>Skiing-Monster</title>
+		<price>4</price>
+		<gender>Universal</gender>
+		<size>170</size>
+	</skiing>
+</equipments>
