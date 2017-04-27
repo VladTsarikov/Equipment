@@ -18,6 +18,7 @@ import by.htp.equipment.entity.equipment.Roller;
 import by.htp.equipment.entity.equipment.Skate;
 import by.htp.equipment.entity.equipment.Skiing;
 import by.htp.equipment.logic.ClientsOperation;
+import by.htp.equipment.logic.DomParser;
 import by.htp.equipment.logic.Operation;
 import by.htp.equipment.logic.SaxParser;
 
@@ -58,7 +59,7 @@ public class Main {
 		client1Op.handOverEquipment(skate);
 		client1Op.handOverEquipment(rollers);
 		
-		Data equipInfo = new Data();
+		//Data equipInfo = new Data();
 	//	equipInfo.showFreeEquipment();
 		//equipInfo.showRentEquipment();
 		//Data test = new Data();
@@ -66,6 +67,14 @@ public class Main {
 		//equipInfo.writeRentEquipment();
 		//equipInfo.makeReport();
 		
+		//SaxParser.saxParse();
+		//DomParser.domParse("resources/Equipments.xml");
+		//DomParser.domParse("resources/Accessories.xml");
 		SaxParser.saxParse();
+		
+		//String s = "8";
+		//Double d = new Double(s);
+		//System.out.println(d);
+		
 	}
 }

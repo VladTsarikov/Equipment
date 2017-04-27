@@ -1,7 +1,7 @@
 package by.htp.equipment.entity;
 
 
-public abstract class Equipment {
+public class Equipment {
 
 	private String title;
 	private double price;
@@ -12,6 +12,8 @@ public abstract class Equipment {
 		Winter,Summer,Spring,Autumn
 	}
 
+	
+	
 	public Equipment(String title, double price, String gender) {
 		this.title = title;
 		this.price = price;
@@ -66,11 +68,11 @@ public abstract class Equipment {
 	public void setPrice(double price) {
 		this.price = price;
 	}
-	public String getCategory() {
+	public String getGender() {
 		return gender;
 	}
-	public void setCategory(String category) {
-		this.gender = category;
+	public void setGender(String gender) {
+		this.gender = gender;
 	}
 	
 	public String getTitle() {

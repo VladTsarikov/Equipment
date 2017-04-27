@@ -2,23 +2,23 @@
 <accessories  xmlns="http://www.it-academy.by/AccessoriesSchema"  
 	   		  xmlns:xsi="http://www.w3.org1/2001/XMLSchema-instance" 
 	   		  xsi:schemaLocation = "http://www.it-academy.by/AccessoriesSchema AccessoriesSchema.xsd">
-	<helmet id="1">
+	<accessory id="1">
 		<title>Helmet-Author</title>
 		<price>2</price>
 		<gender>Universal</gender>
 		<size>56</size>
 		<material>Polycarbonate</material>
-	</helmet>
-	<protection id="2">
+	</accessory>
+	<accessory id="2">
 		<title>Protection-Fora</title>
 		<price>4</price>
 		<gender>Universal</gender>
 		<size>M</size>
-	</protection>
-	<skyPole id="3">
+	</accessory>
+	<accessory id="3">
 		<title>SkyPole-Visu</title>
 		<price>3</price>
 		<gender>Universal</gender>
 		<length>160</length>
-	</skyPole>
+	</accessory>
 </accessories>
